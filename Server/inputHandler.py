@@ -9,7 +9,7 @@ getList = [
 	"ARMGET"
 ]
 
-def parseReceivedInput(receivedSocket: str):
+def parse_input(receivedSocket: str):
 	"""Splits each word in segments returned inside a list"""
 
 	parsedOutput= []
@@ -32,7 +32,7 @@ def handle_request(client_socket: socket):
 	try:
 		recievedString = client_socket.recv(1024).decode()
 		
-		parsedOutput = parseReceivedInput(recievedString)
+		parsedOutput = parse_input(recievedString)
 		update_aof(recievedString, parsedOutput, getList)
 		returnData = handle_commands(parsedOutput)
 
@@ -47,7 +47,7 @@ def handle_request(client_socket: socket):
 # test function | expects: ["GET hello", "SET hello world"]
 def test(commandsList ) -> bool:
 	for command in commandsList:
-		parsedOutput = parseReceivedInput(command)
+		parsedOutput = parse_input(command)
 		returnData = handle_commands(parsedOutput)	
 			
 		print(returnData)
@@ -80,7 +80,7 @@ def load_aof(commandsList):
 	print("Loading backup.. please wait!")
 
 	for command in commandsList:
-		parsedOutput = parseReceivedInput(command)
+		parsedOutput = parse_input(command)
 		handle_commands(parsedOutput)
 	
 	print("backup loaded successfully!")
