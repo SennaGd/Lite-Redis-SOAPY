@@ -1,0 +1,2 @@
+SET hello universe bye world
+DEL hello bye

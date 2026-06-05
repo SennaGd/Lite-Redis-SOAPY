@@ -1,0 +1,8 @@
+Waiting to connect to bluetoothd...[19P[0;94m[bluetoothctl]> [0m[K[[0;92mNEW[0m] Media /org/bluez/hci0 
+[0;94m[bluetoothctl]> [0m[K	SupportedUUIDs: 0000110a-0000-1000-8000-00805f9b34fb
+[0;94m[bluetoothctl]> [0m[K	SupportedUUIDs: 0000110b-0000-1000-8000-00805f9b34fb
+[0;94m[bluetoothctl]> [0m[KAgent registered
+[0;94m[bluetoothctl]> [0m[K[[0;93mCHG[0m] Controller 10:68:38:26:A7:D8 Pairable: yes
+[0;94m[bluetoothctl]> [0m[Khci0 new_settings: powered bondable ssp br/edr le secure-conn wide-band-speech cis-central cis-peripheral iso-broadcaster sync-receiver ll-privacy past-sender past-receiver 
+[0;94m[bluetoothctl]> [0mquit
+[0;94m[bluetoothctl]> [0m[K
