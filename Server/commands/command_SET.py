@@ -1,5 +1,5 @@
 import re
-from ..typeChecking import check_type
+from typeChecking import check_type
 
 def command_SET(dataList: list[dict], parsedOutput: list):
 	key, value = None, None
@@ -13,7 +13,8 @@ def command_SET(dataList: list[dict], parsedOutput: list):
 
 		# unequal index is value
 		else:
-			value = check_type(parsedOutput[i])		
+			value = parsedOutput[i]
+			value = check_type(value)		
 
 		if key and value:
 			newData[0][key] = value

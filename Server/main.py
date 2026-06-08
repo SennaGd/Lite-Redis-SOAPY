@@ -2,6 +2,8 @@ from socket import socket, AF_INET, SOCK_STREAM
 from time import time
 from inputHandler import handle_request, get_aof_contents, load_aof
 
+SAVING = False 
+
 BACKLOG_SIZE = 10
 BIND_IP = "0.0.0.0"
 BIND_PORT = 9998
@@ -11,8 +13,9 @@ server.bind((BIND_IP, BIND_PORT))
 server.listen(BACKLOG_SIZE) 
 
 # load backup
-backupFile = get_aof_contents()
-load_aof(backupFile)
+if SAVING:
+	backupFile = get_aof_contents()
+	load_aof(backupFile)
 
 
 while True:

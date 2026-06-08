@@ -15,14 +15,15 @@ def check_if_float(string: str):
 				return False
 
 			dotIndex.append(index)
-		index += 1	
 
+		index += 1	
+	if dots == 0:
+		return False
 	# remove dots | check if the value is numberic	
 	return dotIndex[0] 
 
 def parse_to_float(string: str):
 	isFloat = check_if_float(string)
-
 	if isFloat == False:
 		return string 
 	else:

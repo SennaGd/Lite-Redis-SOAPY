@@ -1,18 +1,24 @@
-def command_ARSET(dataList: list[dict], parsedOutput: list):
-	#ARSET balls one 2 2
+# define the array name:
+from typeChecking import check_type
 
-	#balls[0] = one
-	#balls[1] = 2
-	#balls[2] = 2
+
+def command_ARSET(dataList:list[tuple], parsedOutput: list):
+	newData = [{}]
+	key = parsedOutput[0]
+	values = []
+
+	for value in parsedOutput[1:]:
+		val = check_type(value)
+		
+		values.append(val)
+
+	print(values)
 	
 	print(parsedOutput)
+		
+	if key and len(values)>0:
+		newData[key] = values
+	
 
-	# define the array name:
-	name = parsedOutput[0]
-	
-	parsedOutput[0].pop() # remove name
-	
-	arr = []
-	for values in parsedOutput:
-		arr.append(values)
-	
+	print(newData)
+	return ["G", newData[0]]
