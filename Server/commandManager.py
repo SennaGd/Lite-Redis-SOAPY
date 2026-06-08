@@ -11,6 +11,10 @@ commandsList = {
 
 
 def handle_commands(parsedOutput: list):
+	if len(parsedOutput) == 0:
+		return None
+	if r"\n" in parsedOutput[len(parsedOutput)-1]:
+		print("NEWLINE CHAR")
 	fetchedFunc = commandsList[parsedOutput[0]]	
 	returnedData =	fetchedFunc(dataList, parsedOutput[1:])	
 	print(fetchedFunc)	

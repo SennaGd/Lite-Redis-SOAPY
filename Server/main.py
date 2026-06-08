@@ -4,7 +4,7 @@ from inputHandler import handle_request, get_aof_contents, load_aof
 
 BACKLOG_SIZE = 10
 BIND_IP = "0.0.0.0"
-BIND_PORT = 9999
+BIND_PORT = 9998
 
 server = socket(AF_INET, SOCK_STREAM)
 server.bind((BIND_IP, BIND_PORT))
@@ -17,7 +17,7 @@ load_aof(backupFile)
 
 while True:
 	client, addr = server.accept()	
-	
+		
 	returnedData = handle_request(client)
 		
 	# sending data back

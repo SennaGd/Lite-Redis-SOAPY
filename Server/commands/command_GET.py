@@ -1,5 +1,4 @@
 def command_GET(dataList: list[dict], dataIndex):
-	print("[+] dataindex", dataIndex)
 	returnedData = []
 	for key in dataIndex:
 		value = dataList[0].get(key)

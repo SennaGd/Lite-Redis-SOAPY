@@ -15,25 +15,32 @@ def parse_input(receivedSocket: str):
 	parsedOutput= []
 	word = ""	
 
+
 	for i in range(len(receivedSocket)):
 		if receivedSocket[i] == " ":
 			parsedOutput.append(word)
 			word = ""
 		else:
 			word += receivedSocket[i]
+		
+		if word[len(word)-3: len(word)-1] == "\n":
+			word = word[0:len(word)-1]
 
 		if i == len(receivedSocket)-1:
+
 			parsedOutput.append(word)
-	
+		
 	return parsedOutput
 
 
 def handle_request(client_socket: socket):
 	try:
-		recievedString = client_socket.recv(1024).decode()
-		
-		parsedOutput = parse_input(recievedString)
-		update_aof(recievedString, parsedOutput, getList)
+		receivedString = client_socket.recv(1024).decode()
+		print(receivedString[len(receivedString)-3:len(receivedString)-1])
+		if receivedString[len(receivedString)-3:len(receivedString)-1] == "\n":
+			receivedString = receivedString[0:len(receivedString)-3]
+		parsedOutput = parse_input(receivedString)
+		update_aof(receivedString, parsedOutput, getList)
 		returnData = handle_commands(parsedOutput)
 
 		print("[-] RECEIVED {", parsedOutput[0], "} REQUEST")
