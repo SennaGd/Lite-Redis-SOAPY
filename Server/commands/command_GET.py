@@ -1,12 +1,7 @@
-def command_GET(dataList: list[dict], dataIndex):
+def command_GET(dataList: list[dict], parsedOutput: list):
 	returnedData = []
-	for key in dataIndex:
-		value = dataList[0].get(key)
-		if value == None:
-			value = "(nil)"
-
-		returnedData.append(value)
-
+	print('h')
+	print(dataList[0])
 	return ["G", returnedData]
 	
 
