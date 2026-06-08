@@ -7,3 +7,4 @@ SET hello universe
 
 SET hello universe
 
+ARSET LIST one two three

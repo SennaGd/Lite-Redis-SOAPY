@@ -1,12 +1,15 @@
 from commands.command_SET import command_SET 
 from commands.command_GET import command_GET
 from commands.command_DEL import command_DEL
+from commands.command_ARSET import command_ARSET
+
 from data import dataList
 
 commandsList = {
 		"GET" : command_GET,
 		"SET" : command_SET,
-		"DEL" : command_DEL
+		"DEL" : command_DEL,
+		"ARSET" : command_ARSET,
 	}
 
 
