@@ -1,7 +1,7 @@
 from socket import socket, AF_INET, SOCK_STREAM
 
 client = socket(AF_INET, SOCK_STREAM)
-client.connect(('127.0.0.1', 9999))
+client.connect(('127.0.0.1', 9998))
 
 message = input()
 client.send(message.encode())
