@@ -60,7 +60,7 @@ def test(commandsList ) -> bool:
 		print(returnData)
 	print(dataList)
 	return True
-test(["ARSET ARRAY 0 hello", "GET hello", "ARGET ARRAY 0"])
+#test(["ARSET ARRAY 0 hello", "GET hello", "ARGET ARRAY 0"])
 
 # returns backup file as list
 def get_aof_contents():

@@ -1,7 +1,5 @@
-SET hello world
-ARGET ARRAY 0
-ARGET ARRAY 0
-ARGET ARRAY 0
-ARGET ARRAY 1
-ARMGET ARRAY 0 1
-ARMGET ARRAY 0 1
+
+ARMSET balls 0 cheese 1 choese 4 balls
+
+ARSET balls 0 cheese 1 choese 4 balls
+
